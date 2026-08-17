@@ -272,8 +272,12 @@
     background:var(--verde-escuro);cursor:pointer;
     -webkit-tap-highlight-color:transparent;
   }
-  .gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease;}
-  .gal-item:hover img{transform:scale(1.06);}
+  .gal-item img,.gal-item video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease;pointer-events:none;}
+  .gal-item:hover img,.gal-item:hover video{transform:scale(1.06);}
+  .gal-loading{
+    grid-column:1/-1;text-align:center;padding:40px 20px;
+    font-size:0.85rem;color:#8a8a7c;
+  }
   .gal-item::after{
     content:'';position:absolute;inset:0;
     background:rgba(20,16,12,0);transition:background .2s ease;
@@ -528,159 +532,8 @@
       <h2>Galeria</h2>
       <p>Jogos, treinos e o pós-jogo de sempre.</p>
     </div>
-    <div class="gal-grid">
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-1.jpeg">
-        <img src="galeria/foto-1.jpeg" alt="Choppecoense em campo" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-2.jpeg">
-        <img src="galeria/foto-2.jpeg" alt="Momento de resenha da Choppecoense" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-3.jpeg">
-        <img src="galeria/foto-3.jpeg" alt="Elenco da Choppecoense em campo" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-4.jpeg">
-        <img src="galeria/foto-4.jpeg" alt="Aquecimento da Choppecoense" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-5.jpeg">
-        <img src="galeria/foto-5.jpeg" alt="Disputa de bola da Choppecoense" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-6.jpeg">
-        <img src="galeria/foto-6.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-7.jpeg">
-        <img src="galeria/foto-7.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-8.jpeg">
-        <img src="galeria/foto-8.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-9.jpeg">
-        <img src="galeria/foto-9.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-10.jpeg">
-        <img src="galeria/foto-10.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-11.jpeg">
-        <img src="galeria/foto-11.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-12.jpeg">
-        <img src="galeria/foto-12.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-13.jpeg">
-        <img src="galeria/foto-13.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-14.jpeg">
-        <img src="galeria/foto-14.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-15.jpeg">
-        <img src="galeria/foto-15.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-16.jpeg">
-        <img src="galeria/foto-16.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-17.jpeg">
-        <img src="galeria/foto-17.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-18.jpeg">
-        <img src="galeria/foto-18.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-19.jpeg">
-        <img src="galeria/foto-19.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-20.jpeg">
-        <img src="galeria/foto-20.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-21.jpeg">
-        <img src="galeria/foto-21.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-22.jpeg">
-        <img src="galeria/foto-22.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-23.jpeg">
-        <img src="galeria/foto-23.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-24.jpeg">
-        <img src="galeria/foto-24.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-25.jpeg">
-        <img src="galeria/foto-25.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-26.jpeg">
-        <img src="galeria/foto-26.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-27.jpeg">
-        <img src="galeria/foto-27.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-28.jpeg">
-        <img src="galeria/foto-28.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-29.jpeg">
-        <img src="galeria/foto-29.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-30.jpeg">
-        <img src="galeria/foto-30.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-31.jpeg">
-        <img src="galeria/foto-31.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-32.jpeg">
-        <img src="galeria/foto-32.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-33.jpeg">
-        <img src="galeria/foto-33.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-34.jpeg">
-        <img src="galeria/foto-34.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-35.jpeg">
-        <img src="galeria/foto-35.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="image" data-src="galeria/foto-36.jpeg">
-        <img src="galeria/foto-36.jpeg" alt="Choppecoense - momentos do time" loading="lazy">
-        <span class="zoom-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="video" data-src="galeria/video-1.mp4">
-        <img src="galeria/video-1-poster.jpg" alt="Vídeo do time da Choppecoense" loading="lazy">
-        <span class="play-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-      </div>
-      <div class="gal-item lightbox-trigger" data-type="video" data-src="galeria/video-2.mp4">
-        <img src="galeria/video-2-poster.jpg" alt="Vídeo do time da Choppecoense antes do jogo" loading="lazy">
-        <span class="play-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-      </div>
+    <div class="gal-grid" id="galGrid" data-gh-owner="guilhermealmeida09" data-gh-repo="Choppecoense" data-gh-path="galeria">
+      <p class="gal-loading mono">Carregando fotos e vídeos…</p>
     </div>
   </div>
 </section>
@@ -746,11 +599,13 @@
     content.innerHTML = ''; // stops video playback/audio immediately
   }
 
-  document.querySelectorAll('.lightbox-trigger').forEach(function(el){
-    el.addEventListener('click', function(){
-      var img = el.querySelector('img');
-      openLightbox(el.dataset.type, el.dataset.src, img ? img.alt : '');
-    });
+  // Event delegation: works for the static uniform photos AND for gallery
+  // items that get added later by the dynamic loader below.
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('.lightbox-trigger');
+    if(!trigger) return;
+    var media = trigger.querySelector('img,video');
+    openLightbox(trigger.dataset.type, trigger.dataset.src, media ? media.alt : '');
   });
 
   closeBtn.addEventListener('click', closeLightbox);
@@ -760,6 +615,72 @@
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape') closeLightbox();
   });
+})();
+
+// ---- Galeria dinâmica: lê os arquivos direto da pasta "galeria" no GitHub ----
+// Basta subir fotos/vídeos nessa pasta do repositório que eles aparecem aqui
+// sozinhos, sem precisar editar este HTML.
+(function(){
+  var grid = document.getElementById('galGrid');
+  if(!grid) return;
+
+  var owner = grid.dataset.ghOwner;
+  var repo = grid.dataset.ghRepo;
+  var path = grid.dataset.ghPath;
+  var apiUrl = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path;
+
+  var IMAGE_EXT = /\.(jpe?g|png|webp|gif)$/i;
+  var VIDEO_EXT = /\.(mp4|mov|webm|m4v)$/i;
+  var ZOOM_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>';
+  var PLAY_SVG = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+
+  function buildImageItem(file){
+    var item = document.createElement('div');
+    item.className = 'gal-item lightbox-trigger';
+    item.dataset.type = 'image';
+    item.dataset.src = file.download_url;
+    item.innerHTML =
+      '<img src="' + file.download_url + '" alt="Choppecoense - galeria" loading="lazy">' +
+      '<span class="zoom-badge">' + ZOOM_SVG + '</span>';
+    return item;
+  }
+
+  function buildVideoItem(file){
+    var item = document.createElement('div');
+    item.className = 'gal-item lightbox-trigger';
+    item.dataset.type = 'video';
+    item.dataset.src = file.download_url;
+    // preload="metadata" shows the video's first frame as a thumbnail
+    // automatically, with no sound and no playback, until it's clicked.
+    item.innerHTML =
+      '<video src="' + file.download_url + '#t=0.5" muted preload="metadata" playsinline></video>' +
+      '<span class="play-badge">' + PLAY_SVG + '</span>';
+    return item;
+  }
+
+  fetch(apiUrl, { headers: { 'Accept': 'application/vnd.github+json' } })
+    .then(function(res){
+      if(!res.ok) throw new Error('GitHub API respondeu ' + res.status);
+      return res.json();
+    })
+    .then(function(files){
+      var media = files.filter(function(f){
+        return f.type === 'file' && (IMAGE_EXT.test(f.name) || VIDEO_EXT.test(f.name));
+      });
+      grid.innerHTML = '';
+      if(media.length === 0){
+        grid.innerHTML = '<p class="gal-loading mono">Nenhuma foto ainda — assim que subirem arquivos na pasta "galeria" do repositório, eles aparecem aqui.</p>';
+        return;
+      }
+      media.forEach(function(file){
+        var item = IMAGE_EXT.test(file.name) ? buildImageItem(file) : buildVideoItem(file);
+        grid.appendChild(item);
+      });
+    })
+    .catch(function(err){
+      grid.innerHTML = '<p class="gal-loading mono">Não foi possível carregar a galeria agora. Tenta recarregar a página em instantes.</p>';
+      console.error('Galeria Choppecoense:', err);
+    });
 })();
 </script>
 
